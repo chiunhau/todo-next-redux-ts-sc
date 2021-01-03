@@ -1,7 +1,7 @@
 Yet another todo app...
 ### Tech Stack
 - Next.js
-- React (Hooks)
+- React Hooks
 - Redux
 - Typescript
 - Styled-Components

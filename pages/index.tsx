@@ -49,7 +49,7 @@ const Index: React.FC = props => {
       </Head>
       <SCContainer>
         <h1>Todo App</h1>
-        <h3>Next.js + React + Redux + Typescript + Styled Components</h3>
+        <h3>Next.js + React Hooks + Redux + Typescript + Styled Components</h3>
         
         <SCTodoList>
           {

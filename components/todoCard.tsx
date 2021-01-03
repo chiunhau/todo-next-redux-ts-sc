@@ -28,7 +28,8 @@ const CheckBox = styled.div<CheckBoxProps>`
   border-radius: 50%;
   border: 1px solid #aaa;
   background-color: ${props => props.checked ? '#333' : '#fff'};
-
+  flex-shrink: 0;
+  
   &:hover {
     cursor: pointer;
   }
@@ -39,6 +40,7 @@ const SCDelete = styled.button`
   height: 20px;
   border: none;
   background: transparent;
+  flex-shrink: 0;
 
   &:hover {
     cursor: pointer;

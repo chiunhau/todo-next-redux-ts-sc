@@ -34,12 +34,12 @@ const SCButton = styled.button`
 `;
 
 type Props = {
-  onSubmit: (title: string) => void
-}
+  onSubmit: (title: string) => void;
+};
 
 const TodoInput: React.FC<Props> = ({ onSubmit }) => {
   const [value, setValue] = React.useState<string>('');
-  
+
   const handleSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault();
 
@@ -56,18 +56,11 @@ const TodoInput: React.FC<Props> = ({ onSubmit }) => {
   return (
     <Card>
       <SCForm onSubmit={handleSubmit}>
-        <SCInput
-          type="text" 
-          placeholder="Add new todo" 
-          onChange={handleChange} 
-          value={value}
-        />
-        <SCButton type="submit">
-          Add
-        </SCButton>
+        <SCInput type="text" placeholder="Add new todo" onChange={handleChange} value={value} />
+        <SCButton type="submit">Add</SCButton>
       </SCForm>
     </Card>
-  )
-}
+  );
+};
 
 export default TodoInput;

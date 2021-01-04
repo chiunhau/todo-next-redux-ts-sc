@@ -18,18 +18,18 @@ const Title = styled.p`
   font-size: 20px;
 `;
 
-
 type CheckBoxProps = {
-  checked: boolean
-}
+  checked: boolean;
+};
+
 const CheckBox = styled.div<CheckBoxProps>`
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid #aaa;
-  background-color: ${props => props.checked ? '#333' : '#fff'};
+  background-color: ${(props) => (props.checked ? '#333' : '#fff')};
   flex-shrink: 0;
-  
+
   &:hover {
     cursor: pointer;
   }
@@ -48,20 +48,20 @@ const SCDelete = styled.button`
 `;
 
 type Props = {
-  title: string,
-  checked: boolean,
-  onToggle: () => void,
-  onDelete: () => void
-}
+  title: string;
+  checked: boolean;
+  onToggle: () => void;
+  onDelete: () => void;
+};
 
-const TodoCard: React.FC<Props> = ({title, checked, onToggle, onDelete}) => {
+const TodoCard: React.FC<Props> = ({ title, checked, onToggle, onDelete }) => {
   return (
     <Card>
-      <CheckBox checked={checked} onClick={onToggle}/>
+      <CheckBox checked={checked} onClick={onToggle} />
       <Title>{title}</Title>
       <SCDelete onClick={onDelete}>X</SCDelete>
     </Card>
-  )
-}
+  );
+};
 
 export default TodoCard;
